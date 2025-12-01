@@ -18,6 +18,10 @@ import lawn12 from "@assets/image_1764581838723.png";
 import lawn13 from "@assets/image_1764581847781.png";
 import lawn14 from "@assets/image_1764581856412.png";
 import lawn15 from "@assets/image_1764581868405.png";
+import lawn16 from "@assets/image_1764581908859.png";
+import lawn17 from "@assets/image_1764581918389.png";
+import lawn18 from "@assets/image_1764581933096.png";
+import lawn19 from "@assets/image_1764581943925.png";
 
 const galleryImages = [
   {
@@ -139,6 +143,38 @@ const galleryImages = [
     caption: "Hedge & Mulch Work",
     location: "Orange, NSW",
     service: "Hedge Trimming & Mulching"
+  },
+  {
+    id: 16,
+    src: lawn16,
+    alt: "Front Entry with Agapanthus",
+    caption: "Entry Garden",
+    location: "Orange, NSW",
+    service: "Garden Maintenance"
+  },
+  {
+    id: 17,
+    src: lawn17,
+    alt: "Large Tree and Open Lawn",
+    caption: "Large Property Care",
+    location: "Orange, NSW",
+    service: "Tree & Lawn Maintenance"
+  },
+  {
+    id: 18,
+    src: lawn18,
+    alt: "Feature Tree with Modern Landscaping",
+    caption: "Contemporary Garden",
+    location: "Orange, NSW",
+    service: "Lawn & Feature Trees"
+  },
+  {
+    id: 19,
+    src: lawn19,
+    alt: "Modern Home Front Garden",
+    caption: "New Home Landscaping",
+    location: "Orange, NSW",
+    service: "Complete Garden Design"
   }
 ];
 
