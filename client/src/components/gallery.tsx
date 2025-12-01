@@ -414,12 +414,12 @@ export function Gallery() {
           <div className="w-20 h-1 bg-primary mx-auto mt-4 rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {displayedImages.map((image) => (
             <button
               key={image.id}
               onClick={() => setSelectedImage(image)}
-              className="relative h-64 rounded-xl overflow-hidden cursor-pointer group shadow-md"
+              className="relative h-40 sm:h-64 rounded-xl overflow-hidden cursor-pointer group shadow-md"
               data-testid={`button-gallery-item-${image.id}`}
             >
               <img
