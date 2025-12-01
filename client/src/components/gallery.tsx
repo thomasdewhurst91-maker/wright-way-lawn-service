@@ -396,6 +396,10 @@ const galleryImages = [
 
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<typeof galleryImages[0] | null>(null);
+  const [showAll, setShowAll] = useState(false);
+  
+  // Show 12 images on mobile by default, all on desktop
+  const displayedImages = showAll ? galleryImages : galleryImages.slice(0, 12);
 
   return (
     <section id="gallery" className="py-20 bg-accent">
@@ -411,7 +415,7 @@ export function Gallery() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {galleryImages.map((image) => (
+          {displayedImages.map((image) => (
             <button
               key={image.id}
               onClick={() => setSelectedImage(image)}
@@ -429,6 +433,19 @@ export function Gallery() {
             </button>
           ))}
         </div>
+
+        {!showAll && galleryImages.length > 12 && (
+          <div className="flex justify-center mt-12">
+            <Button
+              onClick={() => setShowAll(true)}
+              size="lg"
+              className="rounded-full"
+              data-testid="button-view-all-gallery"
+            >
+              View All {galleryImages.length} Photos
+            </Button>
+          </div>
+        )}
       </div>
 
       <Dialog open={!!selectedImage} onOpenChange={(open) => !open && setSelectedImage(null)}>

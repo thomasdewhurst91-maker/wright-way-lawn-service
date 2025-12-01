@@ -37,13 +37,18 @@ export function Hero() {
               <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
               <span className="text-sm font-medium">5-Star Rated</span>
             </Badge>
-            <Badge
-              variant="outline"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 backdrop-blur-md border-secondary/40 text-white hover:bg-secondary/30"
+            <div
+              className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 backdrop-blur-md border border-secondary/40 text-white rounded-full hover:bg-secondary/30 transition-colors"
               data-testid="badge-phone-numbers"
             >
-              <span className="text-sm font-medium">0402 025 585 • 0411 110 070</span>
-            </Badge>
+              <a href="tel:0402025585" className="text-sm font-medium hover:underline" data-testid="link-phone-1">
+                0402 025 585
+              </a>
+              <span className="text-sm font-medium">•</span>
+              <a href="tel:0411110070" className="text-sm font-medium hover:underline" data-testid="link-phone-2">
+                0411 110 070
+              </a>
+            </div>
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6" data-testid="text-hero-title">
