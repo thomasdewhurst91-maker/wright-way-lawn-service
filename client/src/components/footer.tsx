@@ -1,4 +1,5 @@
-import { Sprout, Phone, MapPin, Mail } from "lucide-react";
+import { Sprout, Phone, MapPin } from "lucide-react";
+import { SiFacebook } from "react-icons/si";
 
 export function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -24,9 +25,21 @@ export function Footer() {
               <Sprout className="h-6 w-6 text-primary" />
               <span className="font-bold text-xl tracking-tight">Wright Way Lawn Service</span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
               Professional lawn care and garden maintenance services in Orange, NSW. Family-owned and operated with over 10 years of experience.
             </p>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.facebook.com/wrightwaylawnservice.com.au"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors"
+                data-testid="link-footer-facebook"
+              >
+                <SiFacebook className="h-5 w-5" />
+                <span className="text-sm">Follow us on Facebook</span>
+              </a>
+            </div>
           </div>
 
           <div>
