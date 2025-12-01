@@ -1,13 +1,18 @@
-import { Scissors, Flower2, Building2, Droplets, Check } from "lucide-react";
+import { Flower2, Building2, Droplets, Check, Leaf } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+
+import lawnMowingImg from "@assets/image_1764581064975.png";
+import gardenMaintenanceImg from "@assets/image_1764581085781.png";
+import pressureWashingImg from "@assets/image_1764582014840.png";
+import commercialImg from "@assets/image_1764581075804.png";
 
 const services = [
   {
     id: "lawn-mowing",
     title: "Lawn Mowing",
     description: "Regular mowing services to keep your grass healthy and looking sharp. Includes edging and cleanup.",
-    icon: Scissors,
-    image: "https://images.unsplash.com/photo-1592419044706-39796d40f98c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    icon: Leaf,
+    image: lawnMowingImg,
     features: ["Precision Cutting", "Edging Included", "Green Waste Removal"]
   },
   {
@@ -15,7 +20,7 @@ const services = [
     title: "Garden Maintenance",
     description: "Complete care for your flower beds and shrubs. Weeding, light pruning, and garden tidy-ups.",
     icon: Flower2,
-    image: "https://images.unsplash.com/photo-1584467541268-b040f83be3fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: gardenMaintenanceImg,
     features: ["Light Pruning", "Weed Control", "Garden Tidy-Ups"]
   },
   {
@@ -23,7 +28,7 @@ const services = [
     title: "Pressure Washing",
     description: "Professional pressure washing for driveways, paths, and outdoor surfaces. Restore your property's shine.",
     icon: Droplets,
-    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: pressureWashingImg,
     features: ["Driveways & Paths", "Decks & Patios", "Exterior Cleaning"]
   },
   {
@@ -31,7 +36,7 @@ const services = [
     title: "Commercial",
     description: "Reliable grounds keeping for businesses, strata, and commercial properties in Orange.",
     icon: Building2,
-    image: "https://images.unsplash.com/photo-1628020150953-f4c09440f80e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: commercialImg,
     features: ["Regular Schedule", "Professional Invoicing", "All Services Available"]
   }
 ];
