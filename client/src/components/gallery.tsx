@@ -30,6 +30,10 @@ import lawn24 from "@assets/image_1764582014840.png";
 import lawn25 from "@assets/image_1764582023892.png";
 import lawn26 from "@assets/image_1764582032238.png";
 import lawn27 from "@assets/image_1764582041963.png";
+import lawn28 from "@assets/image_1764582052755.png";
+import lawn29 from "@assets/image_1764582062754.png";
+import lawn30 from "@assets/image_1764582071948.png";
+import lawn31 from "@assets/image_1764582081670.png";
 
 const galleryImages = [
   {
@@ -247,6 +251,38 @@ const galleryImages = [
     caption: "Front Garden Roses",
     location: "Orange, NSW",
     service: "Lawn & Rose Care"
+  },
+  {
+    id: 28,
+    src: lawn28,
+    alt: "Colorful Lilies Garden Display",
+    caption: "Lily Garden",
+    location: "Orange, NSW",
+    service: "Flowering Garden Care"
+  },
+  {
+    id: 29,
+    src: lawn29,
+    alt: "Pink Flowering Tree with Lawn Verge",
+    caption: "Street Verge Care",
+    location: "Orange, NSW",
+    service: "Lawn Edging & Trees"
+  },
+  {
+    id: 30,
+    src: lawn30,
+    alt: "Large Lawn with Irrigation System",
+    caption: "Irrigation & Lawn Care",
+    location: "Orange, NSW",
+    service: "Large Property Maintenance"
+  },
+  {
+    id: 31,
+    src: lawn31,
+    alt: "Side Yard with Paver Strips",
+    caption: "Contemporary Side Yard",
+    location: "Orange, NSW",
+    service: "Lawn & Paver Maintenance"
   }
 ];
 
