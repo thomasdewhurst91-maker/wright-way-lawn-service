@@ -14,6 +14,10 @@ import lawn8 from "@assets/image_1764581599344.png";
 import lawn9 from "@assets/image_1764581610862.png";
 import lawn10 from "@assets/image_1764581619347.png";
 import lawn11 from "@assets/image_1764581630779.png";
+import lawn12 from "@assets/image_1764581838723.png";
+import lawn13 from "@assets/image_1764581847781.png";
+import lawn14 from "@assets/image_1764581856412.png";
+import lawn15 from "@assets/image_1764581868405.png";
 
 const galleryImages = [
   {
@@ -103,6 +107,38 @@ const galleryImages = [
     caption: "Rose Garden",
     location: "Orange, NSW",
     service: "Lawn & Garden Maintenance"
+  },
+  {
+    id: 12,
+    src: lawn12,
+    alt: "Circular Paver Feature with Rose Bush",
+    caption: "Feature Garden Bed",
+    location: "Orange, NSW",
+    service: "Garden Design & Paving"
+  },
+  {
+    id: 13,
+    src: lawn13,
+    alt: "Hedge Trimming Side Yard",
+    caption: "Side Yard Maintenance",
+    location: "Orange, NSW",
+    service: "Hedge Trimming & Lawn Care"
+  },
+  {
+    id: 14,
+    src: lawn14,
+    alt: "Side Pathway with Pebbles",
+    caption: "Pathway Landscaping",
+    location: "Orange, NSW",
+    service: "Garden Bed & Path Design"
+  },
+  {
+    id: 15,
+    src: lawn15,
+    alt: "Hedge Trimming with Mulch Beds",
+    caption: "Hedge & Mulch Work",
+    location: "Orange, NSW",
+    service: "Hedge Trimming & Mulching"
   }
 ];
 
