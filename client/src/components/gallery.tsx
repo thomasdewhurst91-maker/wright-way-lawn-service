@@ -34,6 +34,10 @@ import lawn28 from "@assets/image_1764582052755.png";
 import lawn29 from "@assets/image_1764582062754.png";
 import lawn30 from "@assets/image_1764582071948.png";
 import lawn31 from "@assets/image_1764582081670.png";
+import lawn32 from "@assets/image_1764582097910.png";
+import lawn33 from "@assets/image_1764582105305.png";
+import lawn34 from "@assets/image_1764582112960.png";
+import lawn35 from "@assets/image_1764582124133.png";
 
 const galleryImages = [
   {
@@ -283,6 +287,38 @@ const galleryImages = [
     caption: "Contemporary Side Yard",
     location: "Orange, NSW",
     service: "Lawn & Paver Maintenance"
+  },
+  {
+    id: 32,
+    src: lawn32,
+    alt: "Manicured Lawn with Tall Hedge Backdrop",
+    caption: "Backyard Perfection",
+    location: "Orange, NSW",
+    service: "Lawn & Hedge Maintenance"
+  },
+  {
+    id: 33,
+    src: lawn33,
+    alt: "Backyard with Patio and Mature Trees",
+    caption: "Backyard Retreat",
+    location: "Orange, NSW",
+    service: "Lawn & Tree Care"
+  },
+  {
+    id: 34,
+    src: lawn34,
+    alt: "Rural Property with Native Trees",
+    caption: "Rural Property Care",
+    location: "Orange, NSW",
+    service: "Large Property Maintenance"
+  },
+  {
+    id: 35,
+    src: lawn35,
+    alt: "Lattice Screen with Climbing Roses",
+    caption: "Garden Lattice & Roses",
+    location: "Orange, NSW",
+    service: "Garden Design & Care"
   }
 ];
 
