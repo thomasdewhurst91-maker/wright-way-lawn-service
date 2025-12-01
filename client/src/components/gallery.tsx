@@ -42,6 +42,10 @@ import lawn36 from "@assets/image_1764582154252.png";
 import lawn37 from "@assets/image_1764582162060.png";
 import lawn38 from "@assets/image_1764582170693.png";
 import lawn39 from "@assets/image_1764582179177.png";
+import lawn40 from "@assets/image_1764582199773.png";
+import lawn41 from "@assets/image_1764582211401.png";
+import lawn42 from "@assets/image_1764582221312.png";
+import lawn43 from "@assets/image_1764582246255.png";
 
 const galleryImages = [
   {
@@ -355,6 +359,38 @@ const galleryImages = [
     caption: "Estate Lawn Care",
     location: "Orange, NSW",
     service: "Large Property & Hedges"
+  },
+  {
+    id: 40,
+    src: lawn40,
+    alt: "Backyard with Palm Tree Feature",
+    caption: "Palm Tree & Lawn",
+    location: "Orange, NSW",
+    service: "Feature Tree & Lawn Care"
+  },
+  {
+    id: 41,
+    src: lawn41,
+    alt: "Immaculate Backyard Lawn",
+    caption: "Perfect Backyard",
+    location: "Orange, NSW",
+    service: "Premium Lawn Mowing"
+  },
+  {
+    id: 42,
+    src: lawn42,
+    alt: "Front Entrance with Shaped Hedges",
+    caption: "Front Garden Design",
+    location: "Orange, NSW",
+    service: "Hedge Shaping & Planting"
+  },
+  {
+    id: 43,
+    src: lawn43,
+    alt: "Curved Lawn Edge with Large Hedge",
+    caption: "Side Yard Hedge",
+    location: "Orange, NSW",
+    service: "Lawn Edging & Hedges"
   }
 ];
 
