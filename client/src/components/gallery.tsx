@@ -26,6 +26,10 @@ import lawn20 from "@assets/image_1764581957059.png";
 import lawn21 from "@assets/image_1764581965774.png";
 import lawn22 from "@assets/image_1764581974451.png";
 import lawn23 from "@assets/image_1764581984893.png";
+import lawn24 from "@assets/image_1764582014840.png";
+import lawn25 from "@assets/image_1764582023892.png";
+import lawn26 from "@assets/image_1764582032238.png";
+import lawn27 from "@assets/image_1764582041963.png";
 
 const galleryImages = [
   {
@@ -211,6 +215,38 @@ const galleryImages = [
     caption: "Premium Lawn Care",
     location: "Orange, NSW",
     service: "Lawn Mowing & Garden Beds"
+  },
+  {
+    id: 24,
+    src: lawn24,
+    alt: "Corner Garden Bed with Modern Plantings",
+    caption: "Modern Corner Garden",
+    location: "Orange, NSW",
+    service: "Garden Design & Mulching"
+  },
+  {
+    id: 25,
+    src: lawn25,
+    alt: "Colorful Flower Garden with Foxgloves",
+    caption: "Vibrant Flower Beds",
+    location: "Orange, NSW",
+    service: "Garden Planting & Care"
+  },
+  {
+    id: 26,
+    src: lawn26,
+    alt: "Railway Sleeper Garden Edging",
+    caption: "Garden Edging",
+    location: "Orange, NSW",
+    service: "Garden Bed Design"
+  },
+  {
+    id: 27,
+    src: lawn27,
+    alt: "Front House Rose Bushes",
+    caption: "Front Garden Roses",
+    location: "Orange, NSW",
+    service: "Lawn & Rose Care"
   }
 ];
 
