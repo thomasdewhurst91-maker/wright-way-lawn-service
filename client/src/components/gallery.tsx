@@ -22,6 +22,10 @@ import lawn16 from "@assets/image_1764581908859.png";
 import lawn17 from "@assets/image_1764581918389.png";
 import lawn18 from "@assets/image_1764581933096.png";
 import lawn19 from "@assets/image_1764581943925.png";
+import lawn20 from "@assets/image_1764581957059.png";
+import lawn21 from "@assets/image_1764581965774.png";
+import lawn22 from "@assets/image_1764581974451.png";
+import lawn23 from "@assets/image_1764581984893.png";
 
 const galleryImages = [
   {
@@ -175,6 +179,38 @@ const galleryImages = [
     caption: "New Home Landscaping",
     location: "Orange, NSW",
     service: "Complete Garden Design"
+  },
+  {
+    id: 20,
+    src: lawn20,
+    alt: "Feature Plant with Ornamental Grasses",
+    caption: "Modern Feature Planting",
+    location: "Orange, NSW",
+    service: "Garden Design & Planting"
+  },
+  {
+    id: 21,
+    src: lawn21,
+    alt: "Large Paver Patio with Curved Lawn",
+    caption: "Backyard Oasis",
+    location: "Orange, NSW",
+    service: "Lawn & Patio Maintenance"
+  },
+  {
+    id: 22,
+    src: lawn22,
+    alt: "Street Front Hedge Trimming",
+    caption: "Front Hedge Work",
+    location: "Orange, NSW",
+    service: "Professional Hedge Trimming"
+  },
+  {
+    id: 23,
+    src: lawn23,
+    alt: "Pristine Lawn with Feature Garden Bed",
+    caption: "Premium Lawn Care",
+    location: "Orange, NSW",
+    service: "Lawn Mowing & Garden Beds"
   }
 ];
 
