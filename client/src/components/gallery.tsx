@@ -38,6 +38,10 @@ import lawn32 from "@assets/image_1764582097910.png";
 import lawn33 from "@assets/image_1764582105305.png";
 import lawn34 from "@assets/image_1764582112960.png";
 import lawn35 from "@assets/image_1764582124133.png";
+import lawn36 from "@assets/image_1764582154252.png";
+import lawn37 from "@assets/image_1764582162060.png";
+import lawn38 from "@assets/image_1764582170693.png";
+import lawn39 from "@assets/image_1764582179177.png";
 
 const galleryImages = [
   {
@@ -319,6 +323,38 @@ const galleryImages = [
     caption: "Garden Lattice & Roses",
     location: "Orange, NSW",
     service: "Garden Design & Care"
+  },
+  {
+    id: 36,
+    src: lawn36,
+    alt: "Perfect Backyard Lawn with Deck",
+    caption: "Pristine Backyard",
+    location: "Orange, NSW",
+    service: "Premium Lawn Mowing"
+  },
+  {
+    id: 37,
+    src: lawn37,
+    alt: "Backyard with Pink Oleander",
+    caption: "Garden & Lawn Care",
+    location: "Orange, NSW",
+    service: "Flowering Trees & Lawn"
+  },
+  {
+    id: 38,
+    src: lawn38,
+    alt: "New Garden Bed with Pavers",
+    caption: "Fresh Garden Planting",
+    location: "Orange, NSW",
+    service: "Garden Bed Installation"
+  },
+  {
+    id: 39,
+    src: lawn39,
+    alt: "Large Lawn with Trimmed Hedge Wall",
+    caption: "Estate Lawn Care",
+    location: "Orange, NSW",
+    service: "Large Property & Hedges"
   }
 ];
 
