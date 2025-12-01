@@ -6,33 +6,23 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 const reviews = [
   {
     id: 1,
-    name: "Michael S.",
-    initials: "M",
+    name: "Tom Messenger",
+    initials: "TM",
     role: "Local Guide",
-    timeAgo: "2 months ago",
+    timeAgo: "9 months ago",
     rating: 5,
-    text: "Excellent service. The team arrived on time and did a fantastic job with the mowing and edging. They even cleaned up all the clippings properly. Will definitely be using them again.",
+    text: "After struggling to find a regular lawn mowing service that we were comfortable with, we are very happy with Wright Way's services for both our home and our business. They are very thorough. And their communication and professionalism is excellent.",
     color: "bg-orange-500"
   },
   {
     id: 2,
-    name: "Sarah J.",
-    initials: "S",
-    role: "Local Guide",
-    timeAgo: "5 months ago",
-    rating: 5,
-    text: "Highly recommend Wright Way. Honest, reliable and fair pricing. It's hard to find good tradies these days but these guys are the real deal. My garden has never looked better.",
-    color: "bg-blue-500"
-  },
-  {
-    id: 3,
-    name: "David P.",
-    initials: "D",
+    name: "Natalie",
+    initials: "N",
     role: "Customer",
-    timeAgo: "1 year ago",
+    timeAgo: "3 years ago",
     rating: 5,
-    text: "Great communication and professional finish. They take pride in their work which shows. Very happy with the regular maintenance schedule.",
-    color: "bg-primary"
+    text: "Amazing business, beautiful work and the owner is an absolute legend. I won't go to anyone else.",
+    color: "bg-blue-500"
   }
 ];
 
@@ -80,7 +70,7 @@ export function Reviews() {
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {reviews.map((review) => (
             <Card key={review.id} className="border-card-border hover-elevate transition-shadow" data-testid={`card-review-${review.id}`}>
               <CardContent className="p-6">
