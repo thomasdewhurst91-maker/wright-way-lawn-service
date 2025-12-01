@@ -38,11 +38,11 @@ export function Hero() {
           </Badge>
 
           <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6" data-testid="text-hero-title">
-            The <span className="text-primary">Wright Way</span> to Care for Your Lawn.
+            You <span className="text-primary">GROW</span> it, We'll <span className="text-primary">MOW</span> it!
           </h1>
           
           <p className="text-xl text-gray-100 mb-8 leading-relaxed max-w-2xl" data-testid="text-hero-description">
-            Professional mowing, garden maintenance, and landscaping services. We treat your lawn like our own.
+            Family-owned and fully insured. From mowing and edging to gardening, pressure washing, and light pruning—we handle it all with care and precision.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

@@ -1,4 +1,4 @@
-import { Scissors, Flower2, Building2, Check } from "lucide-react";
+import { Scissors, Flower2, Building2, Droplets, Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const services = [
@@ -8,15 +8,23 @@ const services = [
     description: "Regular mowing services to keep your grass healthy and looking sharp. Includes edging and cleanup.",
     icon: Scissors,
     image: "https://images.unsplash.com/photo-1592419044706-39796d40f98c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    features: ["Precision Cutting", "Edging included"]
+    features: ["Precision Cutting", "Edging Included", "Green Waste Removal"]
   },
   {
     id: "garden-maintenance",
     title: "Garden Maintenance",
-    description: "Complete care for your flower beds and shrubs. Weeding, pruning, and green waste removal.",
+    description: "Complete care for your flower beds and shrubs. Weeding, light pruning, and garden tidy-ups.",
     icon: Flower2,
     image: "https://images.unsplash.com/photo-1584467541268-b040f83be3fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    features: ["Pruning & Hedging", "Weed Control"]
+    features: ["Light Pruning", "Weed Control", "Garden Tidy-Ups"]
+  },
+  {
+    id: "pressure-washing",
+    title: "Pressure Washing",
+    description: "Professional pressure washing for driveways, paths, and outdoor surfaces. Restore your property's shine.",
+    icon: Droplets,
+    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    features: ["Driveways & Paths", "Decks & Patios", "Exterior Cleaning"]
   },
   {
     id: "commercial",
@@ -24,7 +32,7 @@ const services = [
     description: "Reliable grounds keeping for businesses, strata, and commercial properties in Orange.",
     icon: Building2,
     image: "https://images.unsplash.com/photo-1628020150953-f4c09440f80e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    features: ["Regular Schedule", "Professional Invoicing"]
+    features: ["Regular Schedule", "Professional Invoicing", "All Services Available"]
   }
 ];
 
@@ -42,7 +50,7 @@ export function Services() {
           <div className="w-20 h-1 bg-primary mx-auto mt-4 rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
           {services.map((service) => {
             const Icon = service.icon;
             return (
