@@ -1,68 +1,10 @@
-import { MapPin, Phone, Calendar, Loader2 } from "lucide-react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { contactFormSchema, type ContactForm } from "@shared/schema";
+import { MapPin, Phone, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
+import { Label } from "@/components/ui/label";
 
 export function Contact() {
-  const { toast } = useToast();
-
-  const form = useForm<ContactForm>({
-    resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      address: "",
-      service: "Lawn Mowing",
-      message: "",
-    },
-  });
-
-  const submitMutation = useMutation({
-    mutationFn: async (data: ContactForm) => {
-      return apiRequest("POST", "/api/contact", data);
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message Sent!",
-        description: "We'll get back to you shortly.",
-      });
-      form.reset();
-    },
-    onError: () => {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try calling us instead.",
-        variant: "destructive",
-      });
-    },
-  });
-
-  const onSubmit = (data: ContactForm) => {
-    submitMutation.mutate(data);
-  };
 
   return (
     <section id="contact" className="py-20 bg-primary text-primary-foreground">
@@ -135,150 +77,115 @@ export function Contact() {
           </div>
 
           <div className="bg-background text-foreground p-8 rounded-2xl shadow-xl">
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="firstName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>First Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="John" {...field} data-testid="input-first-name" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="lastName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Last Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Doe" {...field} data-testid="input-last-name" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+            <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <p className="hidden">
+                  <label>
+                    Don't fill this out: <input name="bot-field" />
+                  </label>
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="firstName">First Name</Label>
+                    <Input
+                      id="firstName"
+                      name="firstName"
+                      required
+                      placeholder="John"
+                      data-testid="input-first-name"
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="lastName">Last Name</Label>
+                    <Input
+                      id="lastName"
+                      name="lastName"
+                      required
+                      placeholder="Doe"
+                      data-testid="input-last-name"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="email">Email</Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="john.doe@example.com"
+                    data-testid="input-email"
                   />
                 </div>
 
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input type="email" placeholder="john.doe@example.com" {...field} data-testid="input-email" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                <div>
+                  <Label htmlFor="phone">Phone Number</Label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    required
+                    placeholder="0400 000 000"
+                    data-testid="input-phone"
+                  />
+                </div>
 
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Phone Number</FormLabel>
-                      <FormControl>
-                        <Input placeholder="0400 000 000" {...field} data-testid="input-phone" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                <div>
+                  <Label htmlFor="address">Address</Label>
+                  <Input
+                    id="address"
+                    name="address"
+                    required
+                    placeholder="123 Main St, Orange NSW 2800"
+                    data-testid="input-address"
+                  />
+                </div>
 
-                <FormField
-                  control={form.control}
-                  name="address"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Address</FormLabel>
-                      <FormControl>
-                        <Input placeholder="123 Main St, Orange NSW 2800" {...field} data-testid="input-address" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                <div>
+                  <Label htmlFor="service">Service Needed</Label>
+                  <select
+                    id="service"
+                    name="service"
+                    required
+                    className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                    data-testid="select-service"
+                  >
+                    <option value="Lawn Mowing" data-testid="select-option-lawn-mowing">Lawn Mowing</option>
+                    <option value="Garden Maintenance" data-testid="select-option-garden-maintenance">Garden Maintenance</option>
+                    <option value="Commercial Service" data-testid="select-option-commercial">Commercial Service</option>
+                    <option value="Other" data-testid="select-option-other">Other</option>
+                  </select>
+                </div>
 
-                <FormField
-                  control={form.control}
-                  name="service"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Service Needed</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger data-testid="select-service">
-                            <SelectValue placeholder="Select a service" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="Lawn Mowing" data-testid="select-option-lawn-mowing">Lawn Mowing</SelectItem>
-                          <SelectItem value="Garden Maintenance" data-testid="select-option-garden-maintenance">Garden Maintenance</SelectItem>
-                          <SelectItem value="Commercial Service" data-testid="select-option-commercial">Commercial Service</SelectItem>
-                          <SelectItem value="Other" data-testid="select-option-other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          rows={4}
-                          placeholder="Tell us about your property..."
-                          {...field}
-                          data-testid="textarea-message"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                <div>
+                  <Label htmlFor="message">Message (Optional)</Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    placeholder="Tell us about your property..."
+                    data-testid="textarea-message"
+                  />
+                </div>
 
                 <Button
                   type="submit"
                   size="lg"
                   className="w-full"
-                  disabled={submitMutation.isPending}
                   data-testid="button-submit-contact"
                 >
-                  {submitMutation.isPending ? (
-                    <span className="flex items-center gap-2">
-                      <Loader2 className="h-5 w-5 animate-spin" />
-                      Sending...
-                    </span>
-                  ) : (
-                    "Send Message"
-                  )}
+                  Send Message
                 </Button>
-                {submitMutation.isError && (
-                  <p className="text-destructive text-sm" data-testid="text-form-error">
-                    Failed to send message. Please try calling us instead.
-                  </p>
-                )}
-                {submitMutation.isSuccess && (
-                  <p className="text-primary text-sm font-medium" data-testid="text-form-success">
-                    Message sent successfully! We'll be in touch soon.
-                  </p>
-                )}
               </form>
-            </Form>
           </div>
         </div>
       </div>

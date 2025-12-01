@@ -3,34 +3,42 @@ import { X } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
+import lawn1 from "@assets/image_1764581064975.png";
+import lawn2 from "@assets/image_1764581075804.png";
+import lawn3 from "@assets/image_1764581085781.png";
+import lawn4 from "@assets/image_1764581094397.png";
+import lawn5 from "@assets/image_1764581104754.png";
+import lawn6 from "@assets/image_1764581118530.png";
+import lawn7 from "@assets/image_1764581134396.png";
+
 const galleryImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1576043147576-9280628e3b2b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    alt: "Freshly Mowed Lawn",
-    caption: "Lawn Restoration",
+    src: lawn1,
+    alt: "Freshly Mowed Lawn with Garden Bed",
+    caption: "Lawn Maintenance",
     location: "Orange, NSW",
     service: "Residential Lawn Mowing"
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1621538997424-699863459c9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    alt: "Garden Bed",
+    src: lawn2,
+    alt: "Commercial Property Landscaping",
+    caption: "Commercial Landscaping",
+    location: "Orange, NSW",
+    service: "Commercial Grounds Maintenance"
+  },
+  {
+    id: 3,
+    src: lawn3,
+    alt: "Garden Bed with Flowers",
     caption: "Garden Maintenance",
     location: "Orange, NSW",
     service: "Garden Bed Maintenance"
   },
   {
-    id: 3,
-    src: "https://images.unsplash.com/photo-1558440788-b27e8a93e3d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    alt: "Edging Work",
-    caption: "Precision Edging",
-    location: "Orange, NSW",
-    service: "Lawn Edging"
-  },
-  {
     id: 4,
-    src: "https://images.unsplash.com/photo-1598887142487-3c83438f967f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    src: lawn4,
     alt: "Hedge Trimming",
     caption: "Hedge Trimming",
     location: "Orange, NSW",
@@ -38,19 +46,27 @@ const galleryImages = [
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1599687267812-35c05ff70ee9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    alt: "Commercial Property",
-    caption: "Commercial Work",
+    src: lawn5,
+    alt: "Large Property Lawn Care",
+    caption: "Property Maintenance",
     location: "Orange, NSW",
-    service: "Commercial Grounds Maintenance"
+    service: "Residential Lawn Care"
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1615965416553-6ce862086e1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    alt: "Clean Up",
-    caption: "Green Waste Removal",
+    src: lawn6,
+    alt: "Manicured Garden Pathway",
+    caption: "Garden & Pathway",
     location: "Orange, NSW",
-    service: "Cleanup Service"
+    service: "Garden Design & Maintenance"
+  },
+  {
+    id: 7,
+    src: lawn7,
+    alt: "Brick Pathway Landscaping",
+    caption: "Pathway Maintenance",
+    location: "Orange, NSW",
+    service: "Garden Edging & Paths"
   }
 ];
 
