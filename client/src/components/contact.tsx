@@ -34,6 +34,7 @@ export function Contact() {
       lastName: "",
       email: "",
       phone: "",
+      address: "",
       service: "Lawn Mowing",
       message: "",
     },
@@ -187,6 +188,20 @@ export function Contact() {
                       <FormLabel>Phone Number</FormLabel>
                       <FormControl>
                         <Input placeholder="0400 000 000" {...field} data-testid="input-phone" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="address"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Address</FormLabel>
+                      <FormControl>
+                        <Input placeholder="123 Main St, Orange NSW 2800" {...field} data-testid="input-address" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

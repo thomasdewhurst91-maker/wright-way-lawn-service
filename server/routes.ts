@@ -39,6 +39,7 @@ export async function registerRoutes(
           <p><strong>Name:</strong> ${contactData.firstName} ${contactData.lastName}</p>
           <p><strong>Email:</strong> ${contactData.email}</p>
           <p><strong>Phone:</strong> ${contactData.phone}</p>
+          <p><strong>Address:</strong> ${contactData.address}</p>
           <p><strong>Service:</strong> ${contactData.service}</p>
           <p><strong>Message:</strong> ${contactData.message || "No message provided"}</p>
         `,
