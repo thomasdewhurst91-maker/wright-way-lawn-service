@@ -1,0 +1,87 @@
+import { Scissors, Flower2, Building2, Check } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+
+const services = [
+  {
+    id: "lawn-mowing",
+    title: "Lawn Mowing",
+    description: "Regular mowing services to keep your grass healthy and looking sharp. Includes edging and cleanup.",
+    icon: Scissors,
+    image: "https://images.unsplash.com/photo-1592419044706-39796d40f98c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    features: ["Precision Cutting", "Edging included"]
+  },
+  {
+    id: "garden-maintenance",
+    title: "Garden Maintenance",
+    description: "Complete care for your flower beds and shrubs. Weeding, pruning, and green waste removal.",
+    icon: Flower2,
+    image: "https://images.unsplash.com/photo-1584467541268-b040f83be3fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    features: ["Pruning & Hedging", "Weed Control"]
+  },
+  {
+    id: "commercial",
+    title: "Commercial",
+    description: "Reliable grounds keeping for businesses, strata, and commercial properties in Orange.",
+    icon: Building2,
+    image: "https://images.unsplash.com/photo-1628020150953-f4c09440f80e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    features: ["Regular Schedule", "Professional Invoicing"]
+  }
+];
+
+export function Services() {
+  return (
+    <section id="services" className="py-20 bg-card">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <span className="text-primary font-semibold tracking-wider uppercase text-sm" data-testid="text-services-label">
+            Our Expertise
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2" data-testid="text-services-title">
+            Comprehensive Lawn Solutions
+          </h2>
+          <div className="w-20 h-1 bg-primary mx-auto mt-4 rounded-full" />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <Card
+                key={service.id}
+                className="group overflow-hidden border-card-border hover-elevate transition-all"
+                data-testid={`card-service-${service.id}`}
+              >
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+                <CardContent className="p-6 relative">
+                  <div className="absolute -top-8 right-6 w-16 h-16 bg-background rounded-xl shadow-lg flex items-center justify-center text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110">
+                    <Icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground mb-3" data-testid={`text-service-title-${service.id}`}>
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-4" data-testid={`text-service-description-${service.id}`}>
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <Check className="h-4 w-4 text-primary" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
