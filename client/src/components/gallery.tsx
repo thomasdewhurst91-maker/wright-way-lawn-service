@@ -10,6 +10,10 @@ import lawn4 from "@assets/image_1764581094397.png";
 import lawn5 from "@assets/image_1764581104754.png";
 import lawn6 from "@assets/image_1764581118530.png";
 import lawn7 from "@assets/image_1764581134396.png";
+import lawn8 from "@assets/image_1764581599344.png";
+import lawn9 from "@assets/image_1764581610862.png";
+import lawn10 from "@assets/image_1764581619347.png";
+import lawn11 from "@assets/image_1764581630779.png";
 
 const galleryImages = [
   {
@@ -67,6 +71,38 @@ const galleryImages = [
     caption: "Pathway Maintenance",
     location: "Orange, NSW",
     service: "Garden Edging & Paths"
+  },
+  {
+    id: 8,
+    src: lawn8,
+    alt: "Paver Pathway with Decorative Pots",
+    caption: "Garden Pathway",
+    location: "Orange, NSW",
+    service: "Garden Design & Maintenance"
+  },
+  {
+    id: 9,
+    src: lawn9,
+    alt: "Front Garden with Tropical Plants",
+    caption: "Tropical Garden",
+    location: "Orange, NSW",
+    service: "Garden Bed Design"
+  },
+  {
+    id: 10,
+    src: lawn10,
+    alt: "Tiered Garden with Railway Sleepers",
+    caption: "Tiered Garden Design",
+    location: "Orange, NSW",
+    service: "Landscaping & Retaining"
+  },
+  {
+    id: 11,
+    src: lawn11,
+    alt: "Pink Roses and Lawn Care",
+    caption: "Rose Garden",
+    location: "Orange, NSW",
+    service: "Lawn & Garden Maintenance"
   }
 ];
 
