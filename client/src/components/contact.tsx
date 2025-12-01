@@ -40,13 +40,22 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold" data-testid="text-phone-heading">Phone</h4>
-                  <a
-                    href="tel:0402025585"
-                    className="text-primary-foreground/90 font-semibold hover:text-primary-foreground"
-                    data-testid="link-phone"
-                  >
-                    0402 025 585
-                  </a>
+                  <div className="flex flex-col gap-1">
+                    <a
+                      href="tel:0402025585"
+                      className="text-primary-foreground/90 font-semibold hover:text-primary-foreground"
+                      data-testid="link-phone-1"
+                    >
+                      0402 025 585
+                    </a>
+                    <a
+                      href="tel:0411110070"
+                      className="text-primary-foreground/90 font-semibold hover:text-primary-foreground"
+                      data-testid="link-phone-2"
+                    >
+                      0411 110 070
+                    </a>
+                  </div>
                 </div>
               </div>
 

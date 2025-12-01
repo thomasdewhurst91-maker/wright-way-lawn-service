@@ -28,17 +28,26 @@ export function Hero() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-16">
         <div className="max-w-3xl">
-          <Badge
-            variant="outline"
-            className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-primary/20 backdrop-blur-md border-primary/30 text-white hover:bg-primary/30"
-            data-testid="badge-rating"
-          >
-            <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-            <span className="text-sm font-medium">5-Star Rated in Orange, NSW</span>
-          </Badge>
+          <div className="flex flex-wrap gap-3 mb-6">
+            <Badge
+              variant="outline"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 backdrop-blur-md border-primary/30 text-white hover:bg-primary/30"
+              data-testid="badge-rating"
+            >
+              <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+              <span className="text-sm font-medium">5-Star Rated</span>
+            </Badge>
+            <Badge
+              variant="outline"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 backdrop-blur-md border-secondary/40 text-white hover:bg-secondary/30"
+              data-testid="badge-phone-numbers"
+            >
+              <span className="text-sm font-medium">0402 025 585 • 0411 110 070</span>
+            </Badge>
+          </div>
 
           <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6" data-testid="text-hero-title">
-            You <span className="text-primary">GROW</span> it, We'll <span className="text-primary">MOW</span> it!
+            You <span className="text-secondary">GROW</span> it, We'll <span className="text-secondary">MOW</span> it!
           </h1>
           
           <p className="text-xl text-gray-100 mb-8 leading-relaxed max-w-2xl" data-testid="text-hero-description">
